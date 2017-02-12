@@ -7,7 +7,7 @@ add more sophisticated additions to the neural network (such as generalization c
 or changing the model from feed-forward to recurrent).
 
 Refactoring to this point in time:
-*refactored the design into 4 main modules: Model, Optimizer, Learner, FeedForward. 
+* refactored the design into 4 main modules: Model, Optimizer, Learner, FeedForward. 
 * Model: how the network is shaped, how the weights tensor is shaped, how the bias matrix is shaped.
 * FeedForward: this is an abstraction for the model, the model doesn't need to know how the output is created. (we can imagine 
 that a different module could be Recurrent or Convulational)
