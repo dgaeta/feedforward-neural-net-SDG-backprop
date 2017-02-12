@@ -12,7 +12,7 @@ Refactoring to this point in time:
 * FeedForward: this is an abstraction for the model, the model doesn't need to know how the output is created. (we can imagine 
 that a different module could be Recurrent or Convulational)
 * Optimizer: the method by which we calculate error (currently uses Stochastic Gradient Descent)
-* Learner: an algorithm that determines how to use the error function to change the network's behavior (currently uses backprop) 
+* Learner: an algorithm that determines how to use the error function's derivative to change the network's behavior (currently uses backprop) 
 
 The code is written for Python 2.6 or 2.7. Michal Daniel Dobrzanski
 has a repository for Python 3
