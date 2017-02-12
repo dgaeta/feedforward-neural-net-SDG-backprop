@@ -1,3 +1,5 @@
+import os
+
 """
 mnist_loader
 ~~~~~~~~~~~~
@@ -7,6 +9,8 @@ structures that are returned, see the doc strings for ``load_data``
 and ``load_data_wrapper``.  In practice, ``load_data_wrapper`` is the
 function usually called by our neural network code.
 """
+
+import sys
 
 #### Libraries
 # Standard library
@@ -39,7 +43,9 @@ def load_data():
     That's done in the wrapper function ``load_data_wrapper()``, see
     below.
     """
-    f = gzip.open('../data/mnist.pkl.gz', 'rb')
+    cwd = os.getcwd()
+
+    f = gzip.open(cwd + '/../../data/mnist.pkl.gz', 'rb')
     training_data, validation_data, test_data = cPickle.load(f)
     f.close()
     return (training_data, validation_data, test_data)
